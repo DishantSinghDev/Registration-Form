@@ -1,0 +1,28 @@
+{
+  "name": "registration-form",
+  "version": "1.0.0",
+  "description": "A registration form using HTML, CSS, Node.js, and saving data to MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DishantSinghDev/Registration-Form.git"
+  },
+  "keywords": [
+    "registration form"
+  ],
+  "author": "Dishant Singh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DishantSinghDev/Registration-Form/issues"
+  },
+  "homepage": "https://github.com/DishantSinghDev/Registration-Form#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.2"
+  }
+}
