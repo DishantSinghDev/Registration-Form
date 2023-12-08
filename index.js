@@ -11,7 +11,7 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
-mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DB_URL)
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('Could not connect to MongoDB', err));
 
@@ -27,8 +27,15 @@ const User = mongoose.model('User', userSchema);
 
 app.get('/', (req, res) => {
     fs.readFile("form.html", (err, data) => {
+        if (err) {
+            console.error('Error reading file:', err);
+            res.status(500).send('Error reading file');
+            return;
+        }
         res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write(data);
+        if (data) {
+            res.write(data);
+        }
         return res.end();
     })
 });
