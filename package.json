@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "A registration form using HTML, CSS, Node.js, and saving data to MongoDB",
   "main": "index.js",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
