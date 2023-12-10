@@ -26,7 +26,7 @@ const User = mongoose.model('User', userSchema);
 
 
 app.get('/', (req, res) => {
-    fs.readFile("form.html", (err, data) => {
+    fs.readFile("./form.html", (err, data) => {
         if (err) {
             console.error('Error reading file:', err);
             res.status(500).send('Error reading file');
